@@ -71,7 +71,7 @@ func main() {
 			Brokers:     []string{broker},
 			GroupID:     uuid.New().String(),
 			Topic:       topic,
-			StartOffset: kafka.LastOffset - 2,
+			StartOffset: kafka.LastOffset,
 			Dialer: &kafka.Dialer{
 				SASLMechanism: mechanism,
 				TLS:           &tls.Config{},
